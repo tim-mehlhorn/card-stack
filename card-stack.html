@@ -1,0 +1,52 @@
+<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../iron-swipeable-container/iron-swipeable-container.html">
+<!--
+`card-stack`
+A stack of swipeable cards.
+
+@demo demo/index.html 
+-->
+
+<dom-module id="card-stack">
+  <template>
+    <style>
+      :host {
+        display: block;
+        position: relative;
+        height: 500px;
+      }
+      .card{opacity: 0; height: 80%;width: 80%; border: 1px solid grey;
+      box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.07), 0 1px 5px 0 rgba(0, 0, 0, 0.06), 0 3px 1px -2px rgba(0, 0, 0, 0.1);
+       background-color: white;position: absolute;transform-origin: 50% bottom;transition: translate .2s, transform .2s;z-index:1;border-radius:3px;}
+      .card:nth-child(1){opacity: 1;z-index: 8;}
+      .card:nth-child(2){transform: scale(.9)translateY(5%);z-index: 7;opacity: 1;}
+      .card:nth-child(3){transform: scale(.8)translateY(10%);z-index: 6;opacity: 1;}
+      .card:nth-child(4){transform: scale(.7)translateY(15%);z-index: 5;opacity: 1;}
+      .card:nth-child(5){transform: scale(.6)translateY(20%);z-index: 4;opacity: 1;}
+    </style>
+    <iron-swipeable-container>
+    <div class="card">1</div>
+    <div class="card">2</div>
+    <div class="card">3</div>
+    <div class="card">4</div>
+    <div class="card">5</div>
+    <div class="card">6</div>
+    <div class="card">7</div>
+    </iron-swipeable-container>
+  </template>
+
+  <script>
+    Polymer({
+
+      is: 'card-stack',
+
+      properties: {
+        prop1: {
+          type: String,
+          value: 'card-stack',
+        },
+      },
+
+    });
+  </script>
+</dom-module>
