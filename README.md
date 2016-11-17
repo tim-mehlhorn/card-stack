@@ -1,3 +1,5 @@
+![Travis CI](https://travis-ci.org/tim-mehlhorn/card-stack.svg?branch=master)
+
 # \<card-stack\>
 
 A stack of swipeable cards.
